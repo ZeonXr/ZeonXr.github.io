@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,shrink-to-fit=no">
+    <title>cloudesk</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <div id="starbar">
+        <div class="winstar">
+            <a href="#"><img src="./images/windows.png"></a>
+        </div>
+        <div class="time-box">
+            <span id="time"></span>
+        </div>
+    </div>
+
+    <div class="desk-box">
+        <div class="app-box">
+            <div onclick="$('#aboutAuthor').show();">
+                <img src="./images/People 2.ico">
+                <span>作者简介</span>
+            </div>
+            <div onclick="$('#calculator').show();">
+                <img src="./images/Calculator.ico">
+                <span>计算器</span>
+            </div>
+            <div onclick="$('#music').show();">
+                <img src="./images/Music.ico">
+                <span>音乐</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="drag-bar" id="calculator" tabindex=2>
+        <div class="bar">
+            <span class="left">计算器</span>
+            <span class="right">
+                <button class="close-btn" onclick="$('#calculator').hide();">×</button>
+            </span>
+        </div>
+        <section id="calculator-app" onmousedown="stopBubble(this)">
+
+            <div class="screen">
+
+                <div class="formula">
+
+                </div>
+
+                <div class="input">0</div>
+            </div>
+            <div class="ctrl">
+                <button class="operation" id="clear">C</button>
+                <button class="operation" id="sqrt">√(x)</button>
+                <button class="operation" id="sqr">x<sup>2</sup></button>
+                <button class="operation" id="clearEntry"><embed src="./images/undo.svg"></button>
+                <button class="operation" id="clearE">CE</button>
+                <button class="operation" id="pi">π</button>
+                <button class="operation" id="fact">x!</button>
+                <button class="operation" id="×">×</button>
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button class="operation" id="÷">÷</button>
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button class="operation" id="-">-</button>
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button class="operation" id="+">+</button>
+                <button class="operation" id="negate"><span><sup>+</sup>/<sub>-</sub></span></button>
+                <button class="number" id="0">0</button>
+                <button class="number" id=".">.</button>
+                <button class="operation equal" id="=">=</button>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="drag-bar" id="aboutAuthor" tabindex=1>
+        <div class="bar">
+            <span class="left">作者简介</span>
+            <span class="right">
+                <button class="close-btn" onclick="$('#aboutAuthor').hide();">×</button>
+            </span>
+        </div>
+        <section id="aboutAuthor-app" onmousedown="stopBubble(this)">
+            <div class="Authorlogo-box">
+                <div class="Alogo">
+                    <img src="./images/ZeviL.png">
+                </div>
+                <h4 class="Aname">
+                    <P>ZeviL</P>
+                </h4>
+            </div>
+            <div class="detail-box">
+                <ul>
+                    <li>
+                        <a href="https://github.com/ZevilL/ZevilL.github.io" target="_blank">
+                            <i class="dlogo"><img src="./images/GitHub.png"></i>
+
+                            <span>Github仓库链接</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ZevilL.github.io" target="_blank">
+                            <i class="dlogo"><img src="./images/GitHub.png"></i>
+                            <span>Github主页链接</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="drag-bar" id="music" tabindex=3>
+        <div class="bar">
+            <span class="left">音乐</span>
+            <span class="right">
+                <button class="close-btn" onclick="$('#music').hide();">×</button>
+            </span>
+        </div>
+        <section id="music-app" onmousedown="stopBubble(this)">
+            <div class="music-menu">
+
+                <ul>
+                    <h4><img src="./images/列表.png"> 播放列表</h4>
+                    <li><a href="#">列表项一</a></li>
+                    <li><a href="#">列表项二</a></li>
+                    <li><a href="#">列表项三</a></li>
+                    <li><a href="#">列表项四</a></li>
+                </ul>
+            </div>
+            <div class="music-word">
+                <h4>无歌词</h4>
+            </div>
+            <div class="music-ctrl">
+                <div class="mleft">
+                    <img src="images/cover.jpg">
+                    <div class="detial">
+                        <h4>列表项一</h4>
+                        <span>作者</span>
+                    </div>
+
+                </div>
+                <div class="mcenter">
+                    <div class="mbutton">
+                        <a href="#"><img src="./images/随机播放.png"></a>
+                        <a href="#"><img src="./images/上一首 上一个.png"></a>
+                        <a href="#" style="width: 4rem;height: 4rem;"><img src="./images/播放.png"></a>
+                        <a href="#"><img src="./images/下一个 下一首.png"></a>
+                        <a href="#"><img src="./images/循环播放_32.png"></a>
+                    </div>
+                    <div class="mtimebar">
+                        <input type="range">
+                    </div>
+                </div>
+                <div class="mright">
+
+                    <img src="./images/音量.png">
+                    <input type="range">
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+<script>
+    $('#aboutAuthor').hide();
+    $('#calculator').hide();
+    $('#music').hide();
+    $(".drag-bar").on("focus", function () {
+        this.style.zIndex = 99;
+    });
+    $(".drag-bar").on("blur", function () {
+        this.style.zIndex = 10;
+    });
+    $(".drag-bar").on("mousedown", function () {
+        drag(this);
+    });
+</script>
+
+</html>
